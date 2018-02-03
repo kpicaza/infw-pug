@@ -1,0 +1,20 @@
+{
+    "name": "infw/pug",
+    "description": "pug template engine for InFw",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^5.6|^7.0",
+        "pug-php/pug": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "InFw\\Pug\\": "src/InFw/Pug"
+        }
+    },
+    "extra": {
+        "zf": {
+            "config-provider": "InFw\\Pug\\ConfigProvider"
+        }
+    }
+}
