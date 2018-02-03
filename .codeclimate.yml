@@ -8,10 +8,6 @@ plugins:
     config:
       file_extensions:
         - php
-  phan:
-    enabled: true
-    config:
-      file_extensions: "php"
   sonar-php:
     enabled: true
     config:
