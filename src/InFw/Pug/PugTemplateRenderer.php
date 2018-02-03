@@ -52,10 +52,12 @@ class PugTemplateRenderer implements TemplateRendererInterface
      */
     public function render($name, $params = [])
     {
-        $path = $this->path . str_replace('::', '/', $name);
-
         return $this->pug->render(
-            $path . '.' . $this->config['extension'],
+            sprintf(
+                '%s.%s',
+                $this->path . str_replace('::', '/', $name),
+                $this->config['extension']
+            ),
             array_merge($params, $this->globals)
         );
     }
