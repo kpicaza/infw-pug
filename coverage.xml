@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1517680519">
-  <project timestamp="1517680519">
+<coverage generated="1517681760">
+  <project timestamp="1517681760">
     <package name="InFw\Pug">
       <file name="/home/kpicaza/server/infw-reactive/src/infw-pug/src/InFw/Pug/ConfigProvider.php">
         <class name="ConfigProvider" namespace="InFw\Pug">
