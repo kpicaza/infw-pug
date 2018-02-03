@@ -21,7 +21,6 @@ class PugTemplateRendererSpec extends ObjectBehavior
             ]
         );
 
-        $this->shouldBeAnInstanceOf(TemplateRendererInterface::class);
         $this->render('foo', [])->shouldBe('<h1>bar</h1>');
     }
 }

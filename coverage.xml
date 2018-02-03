@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1517681760">
-  <project timestamp="1517681760">
+<coverage generated="1517682457">
+  <project timestamp="1517682457">
     <package name="InFw\Pug">
       <file name="/home/kpicaza/server/infw-reactive/src/infw-pug/src/InFw/Pug/ConfigProvider.php">
         <class name="ConfigProvider" namespace="InFw\Pug">
-          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="10" coveredelements="10"/>
+          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
         </class>
         <line num="9" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="12" type="stmt" count="2"/>
         <line num="13" type="stmt" count="2"/>
         <line num="14" type="stmt" count="2"/>
+        <line num="15" type="stmt" count="2"/>
         <line num="18" type="method" name="getDependencies" visibility="protected" complexity="1" crap="1" count="2"/>
-        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
         <line num="27" type="method" name="getTemplates" visibility="protected" complexity="1" crap="1" count="2"/>
         <line num="30" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
         <line num="34" type="method" name="getPugConfig" visibility="protected" complexity="1" crap="1" count="2"/>
         <line num="37" type="stmt" count="2"/>
-        <metrics loc="49" ncloc="49" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="10" coveredelements="10"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <metrics loc="49" ncloc="49" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="23" coveredelements="23"/>
       </file>
       <file name="/home/kpicaza/server/infw-reactive/src/infw-pug/src/InFw/Pug/PugFactory.php">
         <class name="PugFactory" namespace="InFw\Pug">
-          <metrics complexity="6" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="11" elements="15" coveredelements="13"/>
+          <metrics complexity="6" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="12" elements="16" coveredelements="14"/>
         </class>
         <line num="16" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="18" type="stmt" count="1"/>
@@ -30,6 +43,7 @@
         <line num="23" type="stmt" count="1"/>
         <line num="24" type="stmt" count="1"/>
         <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
         <line num="28" type="stmt" count="1"/>
         <line num="30" type="stmt" count="1"/>
         <line num="33" type="method" name="addOns" visibility="protected" complexity="3" crap="3" count="1"/>
@@ -37,11 +51,11 @@
         <line num="36" type="method" name="anonymousFunction:36#225" complexity="2" crap="2.50" count="1"/>
         <line num="37" type="stmt" count="0"/>
         <line num="38" type="stmt" count="1"/>
-        <metrics loc="41" ncloc="41" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="11" elements="15" coveredelements="13"/>
+        <metrics loc="41" ncloc="41" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="12" elements="16" coveredelements="14"/>
       </file>
       <file name="/home/kpicaza/server/infw-reactive/src/infw-pug/src/InFw/Pug/PugRendererFactory.php">
         <class name="PugRendererFactory" namespace="InFw\Pug">
-          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
         </class>
         <line num="10" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="12" type="stmt" count="1"/>
@@ -51,35 +65,40 @@
         <line num="17" type="stmt" count="1"/>
         <line num="18" type="stmt" count="1"/>
         <line num="20" type="stmt" count="1"/>
-        <metrics loc="25" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <metrics loc="25" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
       </file>
       <file name="/home/kpicaza/server/infw-reactive/src/infw-pug/src/InFw/Pug/PugTemplateRenderer.php">
         <class name="PugTemplateRenderer" namespace="InFw\Pug">
-          <metrics complexity="6" methods="5" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="20" coveredelements="16"/>
+          <metrics complexity="6" methods="5" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="15" elements="22" coveredelements="18"/>
         </class>
-        <line num="35" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
         <line num="37" type="stmt" count="2"/>
         <line num="38" type="stmt" count="2"/>
         <line num="39" type="stmt" count="2"/>
-        <line num="40" type="stmt" count="2"/>
-        <line num="41" type="stmt" count="2"/>
-        <line num="53" type="method" name="render" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="51" type="method" name="render" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
         <line num="55" type="stmt" count="1"/>
         <line num="56" type="stmt" count="1"/>
         <line num="57" type="stmt" count="1"/>
         <line num="58" type="stmt" count="1"/>
         <line num="59" type="stmt" count="1"/>
-        <line num="61" type="stmt" count="1"/>
-        <line num="74" type="method" name="addPath" visibility="public" complexity="2" crap="2" count="2"/>
-        <line num="76" type="stmt" count="2"/>
-        <line num="77" type="stmt" count="2"/>
-        <line num="84" type="method" name="getPaths" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="86" type="stmt" count="0"/>
-        <line num="108" type="method" name="addDefaultParam" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="110" type="stmt" count="0"/>
-        <metrics loc="111" ncloc="56" classes="1" methods="5" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="20" coveredelements="16"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="72" type="method" name="addPath" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="74" type="stmt" count="2"/>
+        <line num="75" type="stmt" count="2"/>
+        <line num="82" type="method" name="getPaths" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="84" type="stmt" count="0"/>
+        <line num="106" type="method" name="addDefaultParam" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="108" type="stmt" count="0"/>
+        <metrics loc="109" ncloc="54" classes="1" methods="5" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="15" elements="22" coveredelements="18"/>
       </file>
     </package>
-    <metrics files="4" loc="226" ncloc="171" classes="4" methods="13" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="37" elements="53" coveredelements="47"/>
+    <metrics files="4" loc="224" ncloc="169" classes="4" methods="13" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="59" coveredstatements="56" elements="72" coveredelements="66"/>
   </project>
 </coverage>

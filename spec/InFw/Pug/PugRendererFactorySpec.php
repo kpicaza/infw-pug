@@ -15,8 +15,9 @@ class PugRendererFactorySpec extends ObjectBehavior
     function it_should_create_pug_template_renderer_instances(
         ContainerInterface $container
     ) {
+        $provider = new ConfigProvider();
         $container->get(Pug::class)->willReturn(new Pug())->shouldBeCalled();
-        $container->get('config')->willReturn((new ConfigProvider())())->shouldBeCalled();
+        $container->get('config')->willReturn($provider())->shouldBeCalled();
 
         $this->__invoke($container)->shouldBeAnInstanceOf(TemplateRendererInterface::class);
     }
