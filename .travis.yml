@@ -18,7 +18,6 @@ before_script:
 
 script:
   - vendor/bin/phpcs --standard=psr2 src/
-  - vendor/bin/phpstan analyse -l 4 -c phpstan.neon src
   - vendor/bin/phpspec run
 
 after_script:
