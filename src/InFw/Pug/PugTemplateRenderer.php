@@ -37,7 +37,7 @@ class PugTemplateRenderer implements TemplateRendererInterface
         $this->pug = $pug;
         $this->globals = $globals;
         $this->config = $config;
-        $this->addPath($config['template_path']);
+        $this->addPath($this->config['template_path']);
     }
 
     /**

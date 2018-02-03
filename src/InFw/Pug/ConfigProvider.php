@@ -39,7 +39,7 @@ class ConfigProvider
             'pugjs' => false,
             'localsJsonFile' => false,
             'cache' => 'data/cache/pug',
-            'template_path' => '',
+            'template_path' => 'templates/',
             'globals' => [],
             'filters' => [],
             'keywords' => [],

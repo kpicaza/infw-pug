@@ -14,7 +14,12 @@ class PugRendererFactory
         return new PugTemplateRenderer(
             $container->get(Pug::class),
             $config['pug']['globals'],
-            $config['templates']
+            array_merge(
+                $config['templates'],
+                [
+                    'template_path' => $config['pug']['template_path']
+                ]
+            )
         );
     }
 }
