@@ -10,7 +10,7 @@ use Zend\Expressive\Template\TemplateRendererInterface;
 
 class PugTemplateRenderer implements TemplateRendererInterface
 {
-    const DEFAULT_PATH = 'templates';
+    const DEFAULT_PATH = 'templates/';
 
     /**
      * @var Pug
@@ -27,10 +27,17 @@ class PugTemplateRenderer implements TemplateRendererInterface
      */
     private $globals;
 
-    public function __construct(Pug $pug, array $globals)
+    /**
+     * @var array
+     */
+    private $config;
+
+    public function __construct(Pug $pug, array $globals, array $config)
     {
         $this->pug = $pug;
         $this->globals = $globals;
+        $this->config = $config;
+        $this->addPath($config['template_path']);
     }
 
     /**
@@ -45,10 +52,12 @@ class PugTemplateRenderer implements TemplateRendererInterface
      */
     public function render($name, $params = [])
     {
+        $path = $this->path . str_replace('::', '/', $name);
 
-        $path = 'templates/' . str_replace('::', '/', $name);
-
-        return $this->pug->render($path. '.pug', array_merge($params, $this->globals));
+        return $this->pug->render(
+            $path . '.' . $this->config['extension'],
+            array_merge($params, $this->globals)
+        );
     }
 
     /**
@@ -62,8 +71,7 @@ class PugTemplateRenderer implements TemplateRendererInterface
      */
     public function addPath($path, $namespace = null)
     {
-        dump($path, $namespace);
-        $this->path = $path;
+        $this->path = empty($path) ? self::DEFAULT_PATH : $path;
     }
 
     /**
@@ -73,7 +81,7 @@ class PugTemplateRenderer implements TemplateRendererInterface
      */
     public function getPaths()
     {
-        return new TemplatePath($this->path);
+        return [new TemplatePath($this->path)];
     }
 
     /**
@@ -97,6 +105,5 @@ class PugTemplateRenderer implements TemplateRendererInterface
      */
     public function addDefaultParam($templateName, $param, $value)
     {
-        // TODO: Implement addDefaultParam() method.
     }
 }

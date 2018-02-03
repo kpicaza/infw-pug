@@ -9,13 +9,12 @@ class PugRendererFactory
 {
     public function __invoke(ContainerInterface $container)
     {
-        $config = $container->get('config')['pug'];
-        $globals = $config['globals'];
-        $pug = new Pug([
-            'pretty' => $config['pretty'],
-            'cache' => $config['cache'],
-        ]);
+        $config = $container->get('config');
 
-        return new PugTemplateRenderer($pug, $globals);
+        return new PugTemplateRenderer(
+            $container->get(Pug::class),
+            $config['pug']['globals'],
+            $config['templates']
+        );
     }
 }
