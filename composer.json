@@ -1,6 +1,6 @@
 {
     "name": "infw/pug",
-    "description": "pug template engine for InFw",
+    "description": "Pug template engine for InFw and Zend Expressive",
     "type": "library",
     "license": "MIT",
     "require": {
