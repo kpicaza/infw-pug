@@ -9,33 +9,41 @@ class ConfigProvider
     public function __invoke()
     {
         return [
-            'dependencies' => [
-                'factories' => [
-                    Pug::class => PugFactory::class,
-                ]
-            ],
-            'templates' => [
-                'extension' => 'pug',
-            ],
-            'pug' => [
-                'pretty' => true,
-                'expressionLanguage' => 'js',
-                'pugjs' => false,
-                'localsJsonFile' => false,
-                'cache' => 'data/cache/pug',
-                'template_path' => '',
-                'globals' => [
-                ],
-                'filters' => [
+            'dependencies' => $this->getDependencies(),
+            'templates' => $this->getTemplates(),
+            'pug' => $this->getPugConfig(),
+        ];
+    }
 
-                ],
-                'keywords' => [
-
-                ],
-                'helpers' => [
-
-                ]
+    protected function getDependencies()
+    {
+        return [
+            'factories' => [
+                Pug::class => PugFactory::class,
             ]
+        ];
+    }
+
+    protected function getTemplates()
+    {
+        return [
+            'extension' => 'pug',
+        ];
+    }
+
+    protected function getPugConfig()
+    {
+        return [
+            'pretty' => true,
+            'expressionLanguage' => 'js',
+            'pugjs' => false,
+            'localsJsonFile' => false,
+            'cache' => 'data/cache/pug',
+            'template_path' => '',
+            'globals' => [],
+            'filters' => [],
+            'keywords' => [],
+            'helpers' => []
         ];
     }
 }
