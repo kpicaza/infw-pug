@@ -1,8 +1,9 @@
 # Expressive Phug Template Renderer
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kpicaza/infw-pug/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kpicaza/infw-pug/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/kpicaza/infw-pug/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kpicaza/infw-pug/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/kpicaza/infw-pug/badges/build.png?b=master)](https://scrutinizer-ci.com/g/kpicaza/infw-pug/build-status/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2f4af7a1f76a00fb03a5/maintainability)](https://codeclimate.com/github/kpicaza/infw-pug/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2f4af7a1f76a00fb03a5/test_coverage)](https://codeclimate.com/github/kpicaza/infw-pug/test_coverage)
 
 ## Installation
 

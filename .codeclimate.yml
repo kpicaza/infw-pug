@@ -1,0 +1,20 @@
+plugins:
+  phpcodesniffer:
+    enabled: true
+    config:
+      file_extensions: "php"
+  phpmd:
+    enabled: true
+    config:
+      file_extensions:
+        - php
+  phan:
+    enabled: true
+    config:
+      file_extensions: "php"
+  sonar-php:
+    enabled: true
+    config:
+      tests_patterns:
+        - test/**
+        - src/*/test/**
