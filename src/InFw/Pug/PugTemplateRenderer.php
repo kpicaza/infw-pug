@@ -38,17 +38,7 @@ class PugTemplateRenderer implements TemplateRendererInterface
         $this->addPath($this->config['template_path']);
     }
 
-    /**
-     * Render a template, optionally with parameters.
-     *
-     * Implementations MUST support the `namespace::template` naming convention,
-     * and allow omitting the filename extension.
-     *
-     * @param string $name
-     * @param array|object $params
-     * @return string
-     */
-    public function render($name, $params = [])
+    public function render(string $name, $params = []) : string
     {
         return $this->pug->render(
             sprintf(
@@ -69,7 +59,7 @@ class PugTemplateRenderer implements TemplateRendererInterface
      * @param string $path
      * @param string $namespace
      */
-    public function addPath($path, $namespace = null)
+    public function addPath(string $path, string $namespace = null) : void
     {
         $this->path = empty($path) ? self::DEFAULT_PATH : $path;
     }
@@ -79,7 +69,7 @@ class PugTemplateRenderer implements TemplateRendererInterface
      *
      * @return TemplatePath[]
      */
-    public function getPaths()
+    public function getPaths() : array
     {
         return [new TemplatePath($this->path)];
     }
@@ -103,7 +93,7 @@ class PugTemplateRenderer implements TemplateRendererInterface
      * @param string $param Param name.
      * @param mixed $value
      */
-    public function addDefaultParam($templateName, $param, $value)
+    public function addDefaultParam(string $templateName, string $param, $value) : void
     {
     }
 }
