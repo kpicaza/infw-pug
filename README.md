@@ -71,3 +71,23 @@ return [
     ],
 ];
 ````
+
+## Config options
+
+````
+// config/autoload/templates.global.php
+    ...
+        'pug' => [
+            'pretty' => true,
+            'expressionLanguage' => 'js',
+            'pugjs' => false,
+            'localsJsonFile' => false,
+            'cache' => 'data/cache/pug',
+            'template_path' => 'templates/',
+            'globals' => [],
+            'filters' => [],
+            'keywords' => [],
+            'helpers' => []
+        ],
+    ...    
+````
