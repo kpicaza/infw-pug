@@ -9,8 +9,14 @@
 
 Install with composer
 
+For Zend expressive 3
 ````
 composer require infw/pug
+````
+
+For Zend expressive 2
+````
+composer require infw/pug:0.0.2
 ````
 
 Enable config provider
