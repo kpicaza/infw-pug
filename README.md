@@ -21,7 +21,7 @@ composer require infw/pug:0.0.2
 
 Enable config provider
 
-````
+````php
 <?php
 // config/config.php
 
@@ -52,7 +52,7 @@ return $aggregator->getMergedConfig();
 
 Enable dependencies
 
-````
+````php
 <?php
 // config/autoload/templates.global
 
@@ -74,7 +74,7 @@ return [
 
 ## Config options
 
-````
+````php
 // config/autoload/templates.global.php
     ...
         'pug' => [
