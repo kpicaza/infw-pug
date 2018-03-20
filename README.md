@@ -5,6 +5,8 @@
 [![Build Status](https://scrutinizer-ci.com/g/kpicaza/infw-pug/badges/build.png?b=master)](https://scrutinizer-ci.com/g/kpicaza/infw-pug/build-status/master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2f4af7a1f76a00fb03a5/maintainability)](https://codeclimate.com/github/kpicaza/infw-pug/maintainability)
 
+[Zend Expressive](https://docs.zendframework.com/zend-expressive/) template renderer based on [PHP Pup template engine](https://github.com/pug-php/pug)
+
 ## Installation
 
 Install with composer
