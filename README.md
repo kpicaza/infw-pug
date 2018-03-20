@@ -93,3 +93,5 @@ return [
         ],
     ...    
 ````
+
+See full [PHP Pug documentation](https://www.phug-lang.com/) for more detail.
