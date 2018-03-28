@@ -43,7 +43,8 @@ class ConfigProvider
             'globals' => [],
             'filters' => [],
             'keywords' => [],
-            'helpers' => []
+            'helpers' => [],
+            'default_params' => [],
         ];
     }
 }

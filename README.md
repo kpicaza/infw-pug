@@ -9,6 +9,7 @@
 
 ## Installation
 
+
 Install with composer
 
 For Zend expressive 3
@@ -86,12 +87,29 @@ return [
             'localsJsonFile' => false,
             'cache' => 'data/cache/pug',
             'template_path' => 'templates/',
-            'globals' => [],
-            'filters' => [],
-            'keywords' => [],
-            'helpers' => []
+            'default_params' => [
+                // globals go here option will be deprecate on 1.0.0 version
+                // '*' => [
+                //     param => mixed value
+                // ]
+                // template default params
+                // 'template_path::name' => [
+                //     param => mixed value
+                // ]
+            ],
+            'filters' => [
+                // filter_name => invokable class
+            ],
+            'keywords' => [
+                // keyword => invokable class
+            ],
+            'helpers' => [
+                // helper_name => invokable class
+            ]
         ],
     ...    
 ````
+
+
 
 See full [PHP Pug documentation](https://www.phug-lang.com/) for more detail.

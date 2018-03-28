@@ -14,6 +14,9 @@ class PugTemplateRendererSpec extends ObjectBehavior
     {
         $this->beConstructedWith(
             new Pug(),
+            ['foo' => [
+                'hello' => 'Hello World!!!',
+            ]],
             ['foo' => 'bar'],
             [
                 'extension' => 'pug',
@@ -21,6 +24,6 @@ class PugTemplateRendererSpec extends ObjectBehavior
             ]
         );
 
-        $this->render('foo', [])->shouldBe('<h1>bar</h1>');
+        $this->render('foo', [])->shouldBe('<h1>bar Hello World!!!</h1>');
     }
 }

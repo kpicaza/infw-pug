@@ -5,9 +5,12 @@ namespace InFw\Pug;
 use Pug\Pug;
 use Zend\Expressive\Template\TemplatePath;
 use Zend\Expressive\Template\TemplateRendererInterface;
+use Zend\Expressive\Template\DefaultParamsTrait;
 
 class PugTemplateRenderer implements TemplateRendererInterface
 {
+    use DefaultParamsTrait;
+
     const DEFAULT_PATH = 'templates/';
 
     /**
@@ -30,14 +33,30 @@ class PugTemplateRenderer implements TemplateRendererInterface
      */
     private $config;
 
-    public function __construct(Pug $pug, array $globals, array $config)
+    public function __construct(Pug $pug, array $defaultParams, array $globals, array $config)
     {
         $this->pug = $pug;
         $this->globals = $globals;
         $this->config = $config;
         $this->addPath($this->config['template_path']);
+        $this->setDefaultParams($defaultParams);
     }
 
+    private function setDefaultParams($defaultParams)
+    {
+        foreach ($defaultParams as $name => $params) {
+            foreach ($params as $param => $value) {
+                $this->addDefaultParam($name, $param, $value);
+            }
+        }
+    }
+
+    /**
+     * @param string $name
+     * @param array $params
+     * @return string
+     * @throws \Exception
+     */
     public function render(string $name, $params = []) : string
     {
         return $this->pug->render(
@@ -46,7 +65,7 @@ class PugTemplateRenderer implements TemplateRendererInterface
                 $this->path . str_replace('::', '/', $name),
                 $this->config['extension']
             ),
-            array_merge($params, $this->globals)
+            $this->mergeParams($name, array_merge($this->globals, $params))
         );
     }
 
@@ -72,28 +91,5 @@ class PugTemplateRenderer implements TemplateRendererInterface
     public function getPaths() : array
     {
         return [new TemplatePath($this->path)];
-    }
-
-    /**
-     * Add a default parameter to use with a template.
-     *
-     * Use this method to provide a default parameter to use when a template is
-     * rendered. The parameter may be overridden by providing it when calling
-     * `render()`, or by calling this method again with a null value.
-     *
-     * The parameter will be specific to the template name provided. To make
-     * the parameter available to any template, pass the TEMPLATE_ALL constant
-     * for the template name.
-     *
-     * If the default parameter existed previously, subsequent invocations with
-     * the same template name and parameter name will overwrite.
-     *
-     * @param string $templateName Name of template to which the param applies;
-     *     use TEMPLATE_ALL to apply to all templates.
-     * @param string $param Param name.
-     * @param mixed $value
-     */
-    public function addDefaultParam(string $templateName, string $param, $value) : void
-    {
     }
 }

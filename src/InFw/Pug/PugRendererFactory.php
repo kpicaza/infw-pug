@@ -13,6 +13,7 @@ class PugRendererFactory
 
         return new PugTemplateRenderer(
             $container->get(Pug::class),
+            $config['pug']['default_params'],
             $config['pug']['globals'],
             array_merge(
                 $config['templates'],
