@@ -6,6 +6,7 @@ env:
 
 php:
   - 7.1
+  - 7.2
 
 # This triggers builds to run on the new TravisCI infrastructure.
 # See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
@@ -21,15 +22,13 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+  - wget https://scrutinizer-ci.com/ocular.phar
 
 script:
   - vendor/bin/phpcs --standard=psr2 src/
   - vendor/bin/phpspec run
+  - composer inspect
 
 after_script:
-  - |
-    if [[ "$TRAVIS_PHP_VERSION" != 'hhvm' ]]; then
-      wget https://scrutinizer-ci.com/ocular.phar
-      php ocular.phar code-coverage:upload --format=php-clover coverage.xml
-    fi
+  - php ocular.phar code-coverage:upload --access-token="your-token" --format=php-clover coverage.clover
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
